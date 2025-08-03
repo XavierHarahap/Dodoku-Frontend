@@ -11,22 +11,22 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
-        <div className="text-center text-white max-w-4xl mx-auto">
+        <div className="text-center text-white max-w-6xl mx-auto">
           {/* Main heading */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+          <h1 className="text-4xl md:text-8xl font-bold mb-4 leading-tight">
             DODOKU GMIM
           </h1>
           
           {/* Subtitle */}
-          <p className="text-lg md:text-xl mb-8 font-medium leading-relaxed">
+          <p className="mt-8 text-lg md:text-3xl mb-6 font-medium leading-relaxed">
             Menghubungkan Jemaat, Membangun Spiritualitas dan Pelayanan GMIM!
           </p>
           
           {/* CTA Button */}
-          <button 
-            className="text-white font-semibold py-3 px-6 rounded-full transition-colors duration-200 text-base hover:opacity-90"
-            style={{backgroundColor: '#8F339C'}}
-          >
+                      <button 
+              className="text-white font-semibold py-4 px-16 rounded-full transition-colors duration-200 text-base md:text-2xl hover:opacity-90 shadow-xl"
+              style={{backgroundColor: '#8F339C'}}
+            >
             Jelajahi
           </button>
         </div>

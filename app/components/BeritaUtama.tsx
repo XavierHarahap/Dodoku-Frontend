@@ -10,53 +10,47 @@ const BeritaUtama = () => {
       title: 'Kolaborasi Karantina Sulut-BNN Sulut Gelar Sosialisasi Bahaya Narkoba',
       excerpt: 'Karantina Sulawesi Utara bersama Tim Kerja Karantina Tumbuhan bersama Penanggungjawab Pos Pelayanan Pelabuhan Laut Manado berpartisipasi aktif dalam kegiatan sosialisasi bahaya narkoba yang...',
       date: '23 Juni, 2025',
-      author: 'Xavier Harahap',
-      category: 'Kegiatan'
+      author: 'Xavier Harahap'
     },
     {
       id: 2,
-      image: '/img/news-placeholder-2.jpg', 
-      title: 'PPKG GMIM Rumu Blahan Ministerium Pedeis Untuk Pertama Bersil Di Manado',
-      excerpt: 'Program Pemberdayaan Kaum Gerja (PPKG) GMIM cabang Rumu Blahan mengadakan kegiatan ministerium pedeis untuk pertama kalinya...',
-      date: '28 Februari 2024',
-      author: 'Pnt. Stephanie',
-      category: 'Program'
+      image: '/img/SINODE POST.jpg', 
+      title: 'BPMS GMIM bantu bahan kebutuhan pokok untuk korban banjir di Manado',
+      excerpt: 'Manado (ANTARA) - Badan Pekerja Majelis Sinode Gereja Masehi Injili di Minahasa (BPMS-GMIM) memberikan bantuan bahan kebutuhan pokok untuk warga Kota Manado terdampak banjir & tanah longsor...',
+      date: '24 Maret, 2025',
+      author: 'Xavier Harahap'
     },
     {
       id: 3,
-      image: '/img/news-placeholder-3.jpg',
-      title: 'Pelaksanaan Salesman Dalam Perkitapl Konsistorium Lokal Rurukan',
-      excerpt: 'Kegiatan salesman dalam rangka perkitapl konsistorium lokal Rurukan telah dilaksanakan dengan penuh khidmat dan dihadiri oleh seluruh jemaat...',
-      date: '25 Februari 2024', 
-      author: 'Pnt. Samuel',
-      category: 'Ibadah'
+      image: '/img/SULUT POST.jpeg',
+      title: 'Gubernur Sulawesi Utara Perkuat Komitmen Pacu Sektor Pariwisata',
+      excerpt: 'Manado (ANTARA) - Gubernur Sulawesi Utara (Sulut) Yulius Selvanus terus membangun komitmen bersama para pemangku kepentingan terkait untuk memacu sektor pariwisata di provinsi ini...',
+      date: '9 Juni, 2024', 
+      author: 'Xavier Harahap'
     },
     {
       id: 4,
-      image: '/img/news-placeholder-4.jpg',
-      title: 'Jemaat GMIM Keluhenan Preatevan Wandaru Pesalah Natal Anak di Gereja',
-      excerpt: 'Jemaat GMIM Keluhenan mengadakan perayaan natal anak yang meriah di gereja. Acara ini diikuti oleh anak-anak dari berbagai kelompok umur...',
-      date: '22 Februari 2024',
-      author: 'Pnt. Maria',
-      category: 'Perayaan'
+      image: '/img/WILAYAH POST.jpg',
+      title: 'Jemaat GMIM Bethesda Ranotana Manado Gelar Lomba Baca Mazmur BIPRA dan Lansia',
+      excerpt: 'Jemaat GMIM Bethesda Ranotana Manado sukses menggelar Lomba Baca Mazmur bagi kategori BIPRA (Bapak, Ibu, Pemuda, Remaja, dan Anak Sekolah Minggu) serta Lansia. Kegiatan yang diselenggarakan......',
+      date: '1 Juni, 2025',
+      author: 'Xavier Harahap'
     },
     {
       id: 5,
-      image: '/img/news-placeholder-5.jpg',
-      title: 'Jemaat GMIM Gun Presia Seying Seadakan HPP Tingkat Rayon Sario',
-      excerpt: 'Hari Persatuan Pemuda (HPP) tingkat rayon Sario telah dilaksanakan dengan sukses oleh jemaat GMIM Gun Presia Seying...',
-      date: '20 Februari 2024',
-      author: 'Pnt. Yohanes',
-      category: 'Pemuda'
+      image: '/img/WARTA POST.jpg',
+      title: 'Jemaat GMIM Sion Perak Sorong Rayakan HUT PIPK dengan Semangat Kebersamaan',
+      excerpt: 'Seluruh anggota Persatuan Ibu-Ibu Kristen (PIPK) Jemaat GMIM Sion Perak Sorong dengan sukacita merayakan Hari Ulang Tahun (HUT) PIPK pada pekan lalu, dalam sebuah ibadah syukur yang penuh......',
+      date: '12 Juni, 2024',
+      author: 'Harris Suparno'
     },
     {
       id: 6,
-      image: '/img/news-placeholder-6.jpg',
-      title: 'GMIM Gup Presia Seying Berkunjung Orangtua Terkah Jemaat Dasilting',
-      excerpt: 'Kegiatan berkunjung orangtua jemaat GMIM Gup Presia Seying ke wilayah Dasilting dalam rangka pelayanan pastoral dan persekutuan...',
-      date: '18 Februari 2024',
-      author: 'Pnt. Gratiana',
-      category: 'Pastoral'
+      image: '/img/KESEHATAN POST.jpeg',
+      title: 'GMIM Sion Perak Sorong Berinovasi dengan Ibadah Daring',
+      excerpt: 'Di tengah tantangan pandemi yang mengharuskan pembatasan kegiatan publik, jemaat GMIM Sion Perak Sorong menunjukkan semangat adaptasi dan inovasi luar biasa....',
+      date: '9 Maret, 2020',
+      author: 'Xavier Harahap'
     }
   ]
 
@@ -65,16 +59,20 @@ const BeritaUtama = () => {
       className="py-16 px-6"
       style={{backgroundColor: '#EAE7ED'}}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-8xl mx-36">
         {/* Section Header */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">
+        <div className="mb-6 mt-12 flex items-center">
+          <div 
+            className="w-1.5 h-3.5 rounded-full mr-1 mt-1"
+            style={{backgroundColor: '#8F339C'}}
+          ></div>
+          <h2 className="text-4xl font-semibold text-[#4F335A]">
             Berita Utama
           </h2>
         </div>
 
         {/* News Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 space-y-2">
           {newsData.map((news) => (
             <PostCard
               key={news.id}
@@ -83,20 +81,11 @@ const BeritaUtama = () => {
               excerpt={news.excerpt}
               date={news.date}
               author={news.author}
-              category={news.category}
             />
           ))}
         </div>
 
-        {/* View More Button */}
-        <div className="text-center mt-12">
-          <button 
-            className="text-white font-semibold py-3 px-8 rounded-full transition-all duration-200 hover:opacity-90 hover:scale-105"
-            style={{backgroundColor: '#8F339C'}}
-          >
-            Lihat Berita Lainnya
-          </button>
-        </div>
+
       </div>
     </section>
   )

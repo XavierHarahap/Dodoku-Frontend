@@ -6,30 +6,32 @@ const Navbar = () => {
       <div className="w-full flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center ml-12">
-          <img 
-            src="/img/LOGO DODOKU.png" 
-            alt="DODOKU GMIM Logo" 
-            className="h-11 w-auto"
-          />
+          <a href="/">
+            <img 
+              src="/img/LOGO DODOKU.png" 
+              alt="DODOKU GMIM Logo" 
+              className="h-11 w-auto cursor-pointer"
+            />
+          </a>
         </div>
 
         {/* Navigation Menu */}
         <div className="hidden md:flex items-center space-x-44 mr-40 text-xl font-medium
         text-white">
           <a 
-            href="#" 
+            href="/tentang-kami" 
             className="hover:text-[#5D1F64] transition-colors duration-200"
           >
             TENTANG GMIM
           </a>
           <a 
-            href="#" 
+            href="/renungan" 
             className="hover:text-[#5D1F64] transition-colors duration-200"
           >
             RENUNGAN
           </a>
           <a 
-            href="#" 
+            href="/berita" 
             className="hover:text-[#5D1F64] transition-colors duration-200"
           >
             BERITA

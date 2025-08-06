@@ -8,7 +8,10 @@ interface MainCardProps {
   date: string
   author: string
   category?: string
+  href?: string
 }
+
+import Link from 'next/link'
 
 const MainCard: React.FC<MainCardProps> = ({ 
   image, 
@@ -16,10 +19,16 @@ const MainCard: React.FC<MainCardProps> = ({
   excerpt, 
   date, 
   author, 
-  category 
+  category,
+  href 
 }) => {
+  const Wrapper: React.FC<{children: React.ReactNode}> = ({ children }) => (
+    href ? <Link href={href} className="block">{children}</Link> : <>{children}</>
+  )
+
   return (
-    <div className="relative w-full h-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+    <Wrapper>
+      <div className="relative w-full h-[401px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
       {/* Background Image */}
       <img 
         src={image} 
@@ -64,6 +73,7 @@ const MainCard: React.FC<MainCardProps> = ({
         </div>
       </div>
     </div>
+    </Wrapper>
   )
 }
 

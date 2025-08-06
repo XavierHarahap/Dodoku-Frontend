@@ -72,17 +72,29 @@ const BeritaUtama = () => {
         </div>
 
         {/* News Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 space-y-2">
-          {newsData.map((news) => (
-            <PostCard
-              key={news.id}
-              image={news.image}
-              title={news.title}
-              excerpt={news.excerpt}
-              date={news.date}
-              author={news.author}
-            />
-          ))}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {newsData.map((news) => {
+            const getHref = (imagePath: string) => {
+              if (imagePath.includes('PENDIDIKAN')) return '/pendidikan'
+              if (imagePath.includes('SINODE')) return '/sinode'
+              if (imagePath.includes('SULUT')) return '/sulut'
+              if (imagePath.includes('WILAYAH')) return '/wilayah-jemaat'
+              if (imagePath.includes('WARTA')) return '/warta'
+              if (imagePath.includes('KESEHATAN')) return '/kesehatan'
+              return '#'
+            }
+            return (
+              <PostCard
+                key={news.id}
+                image={news.image}
+                title={news.title}
+                excerpt={news.excerpt}
+                date={news.date}
+                author={news.author}
+                href={getHref(news.image)}
+              />
+            )
+          })}
         </div>
 
 

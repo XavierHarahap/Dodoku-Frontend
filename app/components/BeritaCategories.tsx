@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const BeritaCategories = () => {
   const beritaCategories = [
@@ -60,24 +61,36 @@ const BeritaCategories = () => {
 
         {/* Berita Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 place-items-center max-w-5xl mx-auto" style={{ gap: '32px' }}>
-          {beritaCategories.map((card) => (
-            <div 
-              key={card.id}
-              className="relative rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-72 aspect-[3/2]"
-              style={{
-                backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('${card.image}')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            >
-              {/* Overlay content */}
-              <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 text-white">
-                <h3 className="text-2xl md:text-3xl font-bold">
-                  {card.title}
-                </h3>
-              </div>
-            </div>
-          ))}
+          {beritaCategories.map((card) => {
+            // Make all categories clickable with appropriate routes
+            let href = '';
+            if (card.title === "SULUT") href = "/sulut";
+            else if (card.title === "SINODE") href = "/sinode";
+            else if (card.title === "WILAYAH/JEMAAT") href = "/wilayah-jemaat";
+            else if (card.title === "KESEHATAN") href = "/kesehatan";
+            else if (card.title === "PENDIDIKAN") href = "/pendidikan";
+            else if (card.title === "WARTA") href = "/warta";
+
+            return (
+              <Link 
+                key={card.id}
+                href={href}
+                className="relative rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-72 aspect-[3/2] cursor-pointer"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('${card.image}')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+                {/* Overlay content */}
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 text-white">
+                  <h3 className="text-2xl md:text-3xl font-bold">
+                    {card.title}
+                  </h3>
+                </div>
+              </Link>
+            )
+          })}
         </div>
       </div>
     </section>

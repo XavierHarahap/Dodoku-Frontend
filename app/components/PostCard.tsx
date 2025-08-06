@@ -7,17 +7,30 @@ interface PostCardProps {
   excerpt: string
   date: string
   author: string
+  href?: string
 }
+
+import Link from 'next/link'
 
 const PostCard: React.FC<PostCardProps> = ({ 
   image, 
   title, 
   excerpt, 
   date, 
-  author 
+  author,
+  href
 }) => {
+  const Wrapper: React.FC<{children: React.ReactNode}> = ({ children }) => (
+    href ? (
+      <Link href={href} className="block">{children}</Link>
+    ) : (
+      <>{children}</>
+    )
+  )
+
   return (
-    <div className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 flex p-2">
+    <Wrapper>
+      <div className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 flex p-2">
       {/* Image */}
       <div className="relative w-80 h-44 flex-shrink-0 overflow-hidden rounded-xl mr-4">
         <img 
@@ -52,6 +65,7 @@ const PostCard: React.FC<PostCardProps> = ({
         </div>
       </div>
     </div>
+    </Wrapper>
   )
 }
 

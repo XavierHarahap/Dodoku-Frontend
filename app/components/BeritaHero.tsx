@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { LogOut } from 'lucide-react'
 
 const BeritaHero = () => {
@@ -14,10 +15,10 @@ const BeritaHero = () => {
         <div className="text-left text-white max-w-2xl">
           {/* Purple badge */}
           <div className="mb-4">
-            <div className="bg-purple-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 w-fit">
+            <Link href="/" className="bg-purple-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 w-fit hover:bg-purple-700 transition-colors">
               <LogOut className="w-4 h-4 scale-x-[-1]" />
               <span className="text-sm font-medium">Kembali ke Beranda</span>
-            </div>
+            </Link>
           </div>
           
           {/* Main heading */}

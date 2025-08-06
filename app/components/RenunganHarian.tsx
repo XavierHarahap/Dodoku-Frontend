@@ -51,7 +51,7 @@ const RenunganHarian = () => {
         </div>
 
         {/* Content Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-32">
           {/* Left side - Main Card */}
           <div className="lg:col-span-1">
             <MainCard
@@ -60,21 +60,30 @@ const RenunganHarian = () => {
               excerpt={featuredRenungan.excerpt}
               date={featuredRenungan.date}
               author={featuredRenungan.author}
+              href="/mtpj"
             />
           </div>
 
           {/* Right side - Post Cards */}
-          <div className="lg:col-span-1 space-y-4 mt-10">
-            {renunganData.map((renungan) => (
-              <PostCard
-                key={renungan.id}
-                image={renungan.image}
-                title={renungan.title}
-                excerpt={renungan.excerpt}
-                date={renungan.date}
-                author={renungan.author}
-              />
-            ))}
+          <div className="lg:col-span-1 space-y-4">
+            {renunganData.map((renungan) => {
+              const getHref = (imagePath: string) => {
+                if (imagePath.includes('RHK')) return '/rhk'
+                if (imagePath.includes('OBOR')) return '/obor'
+                return '#'
+              }
+              return (
+                <PostCard
+                  key={renungan.id}
+                  image={renungan.image}
+                  title={renungan.title}
+                  excerpt={renungan.excerpt}
+                  date={renungan.date}
+                  author={renungan.author}
+                  href={getHref(renungan.image)}
+                />
+              )
+            })}
           </div>
         </div>
 

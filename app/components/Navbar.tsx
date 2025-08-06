@@ -37,7 +37,7 @@ const Navbar = () => {
             BERITA
           </a>
           <a 
-            href="#" 
+            href="/artikel" 
             className="hover:text-[#5D1F64] transition-colors duration-200"
           >
             ARTIKEL

@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -23,12 +24,14 @@ const Hero = () => {
           </p>
           
           {/* CTA Button */}
-                      <button 
+          <Link href="/jelajahi">
+            <button 
               className="text-white font-semibold py-4 px-16 rounded-full transition-colors duration-200 text-base md:text-2xl hover:opacity-90 shadow-xl"
               style={{backgroundColor: '#8F339C'}}
             >
-            Jelajahi
-          </button>
+              Jelajahi
+            </button>
+          </Link>
         </div>
       </div>
 
